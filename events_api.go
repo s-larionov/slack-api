@@ -1,4 +1,4 @@
-package slack_api
+package slack
 
 import (
 	"context"

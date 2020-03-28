@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	api := slack_api.NewEventsAPI(":9090", "/slack")
+	api := slack.NewEventsAPI(":9090", "/slack")
 
 	events := api.Subscribe(base.TypeMessage)
 	go func() {
