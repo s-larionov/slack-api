@@ -98,7 +98,7 @@ type Wrapper struct {
 	Token       string      `json:"token"`
 	TeamID      string      `json:"team_id"`
 	APIAppID    string      `json:"api_app_id"`
-	Event       interface{} `json:"-"` // FIXME
+	Event       interface{} `json:"-"` // TODO
 	EventID     string      `json:"event_id"`
 	EventTime   int64       `json:"event_time"`
 	AuthedUsers []string    `json:"authed_users"`
@@ -121,7 +121,7 @@ func (w *Wrapper) UnmarshalJSON(body []byte) error {
 	w.EventTime = wr.EventTime
 	w.AuthedUsers = wr.AuthedUsers
 
-	// FIXME Might be we shouldn't use fastjson
+	// TODO: Might be we shouldn't use fastjson
 	parsed, err := fastjson.Parse(string(body))
 	if err != nil {
 		return err

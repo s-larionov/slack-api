@@ -11,7 +11,7 @@ type Subteam struct {
 	DateCreate  int64
 	DateUpdate  int64
 	DateDelete  int64
-	AutoType    interface{} // FIXME
+	AutoType    interface{} // TODO
 	CreatedBy   string
 	UpdatedBy   string
 	DeletedBy   string

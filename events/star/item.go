@@ -16,7 +16,7 @@ type Item struct {
 type ItemMessage struct {
 	Item
 	Channel string      `json:"channel"`
-	Message interface{} `json:"message"` // FIXME
+	Message interface{} `json:"message"` // TODO
 }
 
 type ItemChannel struct {
@@ -27,11 +27,11 @@ type ItemChannel struct {
 type ItemFile struct {
 	Item
 	Channel string      `json:"channel"`
-	File    interface{} `json:"file"` // FIXME
+	File    interface{} `json:"file"` // TODO
 }
 
 type ItemFileComment struct {
 	Item
-	File    interface{} `json:"file"`    // FIXME
-	Comment interface{} `json:"comment"` // FIXME
+	File    interface{} `json:"file"`    // TODO
+	Comment interface{} `json:"comment"` // TODO
 }

@@ -17,7 +17,7 @@ type HomeOpened struct {
 }
 
 type View struct {
-	Id                 string `json:"id"`
+	ID                 string `json:"id"`
 	TeamID             string `json:"team_id"`
 	Type               string `json:"type"`
 	PrivateMetadata    string `json:"private_metadata"`

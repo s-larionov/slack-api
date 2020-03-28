@@ -2,11 +2,11 @@ package channel
 
 const (
 	TypePublic             Type = "C"       // Public channel. Used by channel_* events
-	TypePrivate                 = "G"       // Private channel. Used by channel_* events
-	TypePublicMessage           = "channel" // Public channel. Used by message_* events
-	TypePrivateMessage          = "group"   // Private channel. Used by message_* events
-	TypeDirectMessage           = "im"      // Direct message channel. Used by message_* events
-	TypeMultiDirectMessage      = "mpim"    // Multiparty direct message channel. Used by message_* events
+	TypePrivate            Type = "G"       // Private channel. Used by channel_* events
+	TypePublicMessage      Type = "channel" // Public channel. Used by message_* events
+	TypePrivateMessage     Type = "group"   // Private channel. Used by message_* events
+	TypeDirectMessage      Type = "im"      // Direct message channel. Used by message_* events
+	TypeMultiDirectMessage Type = "mpim"    // Multiparty direct message channel. Used by message_* events
 )
 
 type Type string

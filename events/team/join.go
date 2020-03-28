@@ -9,5 +9,5 @@ import (
 // Expected scopes: users:read
 type Join struct {
 	base.Event
-	User interface{} `json:"user"` // FIXME
+	User interface{} `json:"user"` // TODO
 }

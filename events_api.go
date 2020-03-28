@@ -18,8 +18,8 @@ import (
 type SubscribeCallback func(event interface{})
 
 type EventsAPI struct {
-	server        *http.Server
-	subscriptions map[base.Type][]chan events.Wrapper
+	server          *http.Server
+	subscriptions   map[base.Type][]chan events.Wrapper
 	subscriptionsMu sync.RWMutex
 }
 
@@ -74,7 +74,7 @@ func (a *EventsAPI) Subscribe(event base.Type) <-chan events.Wrapper {
 	return ch
 }
 
-func (a EventsAPI) handle(w http.ResponseWriter, r *http.Request) {
+func (a *EventsAPI) handle(w http.ResponseWriter, r *http.Request) {
 	body, _ := ioutil.ReadAll(r.Body)
 
 	requestType := events.RequestType(fastjson.GetString(body, "type"))
@@ -124,7 +124,7 @@ func (a *EventsAPI) handleEventRequest(body []byte, w http.ResponseWriter) {
 	a.subscriptionsMu.RUnlock()
 }
 
-func (a EventsAPI) handleVerificationRequest(body []byte, w http.ResponseWriter) {
+func (a *EventsAPI) handleVerificationRequest(body []byte, w http.ResponseWriter) {
 	var request events.Verification
 	err := json.Unmarshal(body, &request)
 	if err != nil {
@@ -139,7 +139,7 @@ func (a EventsAPI) handleVerificationRequest(body []byte, w http.ResponseWriter)
 	}).Info("verification request was processed")
 }
 
-func (a EventsAPI) handleRateLimitedEvent(body []byte, w http.ResponseWriter) {
+func (a *EventsAPI) handleRateLimitedEvent(body []byte, w http.ResponseWriter) {
 	var request events.AppRateLimited
 	err := json.Unmarshal(body, &request)
 	if err != nil {

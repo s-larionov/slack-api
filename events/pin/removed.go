@@ -12,6 +12,6 @@ type Removed struct {
 	User      string      `json:"user"`
 	ChannelID string      `json:"channel_id"`
 	HasPins   bool        `json:"has_pins"`
-	Item      interface{} `json:"item"` // FIXME
+	Item      interface{} `json:"item"` // TODO
 	EventTS   string      `json:"event_ts"`
 }

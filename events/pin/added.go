@@ -11,6 +11,6 @@ type Added struct {
 	base.Event
 	User      string      `json:"user"`
 	ChannelID string      `json:"channel_id"`
-	Item      interface{} `json:"item"` // FIXME
+	Item      interface{} `json:"item"` // TODO
 	EventTS   string      `json:"event_ts"`
 }

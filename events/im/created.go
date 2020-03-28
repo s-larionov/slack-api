@@ -13,6 +13,6 @@ type Created struct {
 	Channel CreatedChannel `json:"channel"`
 }
 
-// FIXME
+// TODO
 type CreatedChannel struct {
 }
